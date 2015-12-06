@@ -1,0 +1,10 @@
+
+[submodule "gitconfig"]
+	path = gitconfig
+	url = https://github.com/geek4you/gitconfig.git
+
+[submodule "git-extras"]
+	path = git-extras
+	url = https://github.com/visionmedia/git-extras.git
+
+
