@@ -1,0 +1,17 @@
+google-chrome
+sublime-text
+google-drive
+java
+intellij-idea14_0
+diffmerge
+heroku-toolbelt
+adium
+skype
+virtualbox
+gpgtools
+firefox
+gimp
+eclipse-platform
+slack
+iterm2
+macvim
