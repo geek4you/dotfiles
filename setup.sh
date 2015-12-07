@@ -41,4 +41,7 @@ sudo make install
 
 echo "Done."
 
+echo "Downloading files.."
+$BASE/download.sh
+
 echo "Done."
