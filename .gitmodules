@@ -5,6 +5,18 @@
 
 [submodule "git-extras"]
 	path = git-extras
-	url = https://github.com/visionmedia/git-extras.git
+	url = https://github.com/tj/git-extras.git
 
 
+[submodule "gnome-terminal-colors-solarized"]
+	path = gnome-terminal-colors-solarized
+	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+[submodule "dircolors-solarized"]
+	path = dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "os_detect.sh"]
+	path = os_detect.sh
+	url = https://github.com/geek4you/os_detect.sh.git
