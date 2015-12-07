@@ -19,3 +19,6 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/geek4you/vim.git
+[submodule "powerline"]
+	path = powerline
+	url = https://github.com/geek4you/powerline.git
