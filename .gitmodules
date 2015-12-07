@@ -22,3 +22,6 @@
 [submodule "powerline"]
 	path = powerline
 	url = https://github.com/geek4you/powerline.git
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/geek4you/tmux.git
