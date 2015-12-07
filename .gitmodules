@@ -1,13 +1,9 @@
-
 [submodule "gitconfig"]
 	path = gitconfig
 	url = https://github.com/geek4you/gitconfig.git
-
 [submodule "git-extras"]
 	path = git-extras
 	url = https://github.com/tj/git-extras.git
-
-
 [submodule "gnome-terminal-colors-solarized"]
 	path = gnome-terminal-colors-solarized
 	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git
