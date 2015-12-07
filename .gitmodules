@@ -25,3 +25,6 @@
 [submodule "tmux"]
 	path = tmux
 	url = https://github.com/geek4you/tmux.git
+[submodule "z"]
+	path = z
+	url = https://github.com/rupa/z.git
