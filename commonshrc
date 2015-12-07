@@ -1,0 +1,107 @@
+# common configurations for some shells (bash, zsh, etc.)
+
+export BASE_DOTFILES=~/.dotfiles
+
+export READLINK=readlink
+
+# per-host configurations
+
+if [ -f ~/.commonshrc.host ]; then
+  source ~/.commonshrc.host
+fi
+
+HOSTNAME=$(hostname)
+
+
+HOSTNAMECOMMONSHRC=$BASE_DOTFILES/commonshrc.$HOSTNAME
+if [ -n "$INSTALLING" ]; then
+  echo "commonshrc looking for \"${HOSTNAMECOMMONSHRC}\"."
+fi
+if [ -f "$HOSTNAMECOMMONSHRC" ]; then
+  source "$HOSTNAMECOMMONSHRC"
+fi
+
+PRIVATECOMMONSHRC=$BASE_DOTFILES/commonshrc.private
+if [ -f "$PRIVATECOMMONSHRC" ]; then
+  source "$PRIVATECOMMONSHRC"
+fi
+
+alias x=exit
+
+# add user bin directory to PATH
+HOME_BIN="${HOME}/bin"
+if [ -d "${HOME_BIN}" ]; then
+  export PATH="${HOME_BIN}:${PATH}"
+fi
+
+# add user .bin directory to PATH
+HOME_DOTBIN="${HOME}/.bin"
+if [ -d "${HOME_DOTBIN}" ]; then
+  export PATH="${HOME_DOTBIN}:${PATH}"
+fi
+
+USR_LOCAL_BIN="/usr/local/bin"
+if [ -d "${USR_LOCAL_BIN}" ]; then
+  export PATH="${USR_LOCAL_BIN}:${PATH}"
+
+export EDITOR="vim"
+
+# direnv hook
+# https://github.com/zimbatm/direnv
+if command -v direnv > /dev/null 2>&1; then
+	SHELLNAME=''
+	if [ -n "$BASH" ]; then
+		SHELLNAME="bash"
+	elif [ -n "$ZSH_NAME" ]; then
+		SHELLNAME="zsh"
+	fi
+	if [ -n "$SHELLNAME" ]; then
+		eval `direnv hook $SHELLNAME`
+	fi
+fi
+
+# larger bash history (allow 32^3 entries)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+
+# timestamps for bash history. www.debian-administration.org/users/rossen/weblog/1
+HISTTIMEFORMAT='%F %T '
+export HISTTIMEFORMAT
+
+# z ( https://github.com/rupa/z )
+ZFILE=$BASE_DOTFILES/z/z.sh
+if [ -f $ZFILE ]; then
+  source $ZFILE
+fi
+
+OS_DETECT_SCRIPT="$BASE_DOTFILES/os_detect.sh/os_detect.sh"
+if [ -f "$OS_DETECT_SCRIPT" ]; then
+  source "${OS_DETECT_SCRIPT}"
+  OS_DETECT=$(os_detect)
+  export OS_DETECT
+fi
+
+LSS_SCRIPT="$BASE_DOTFILES/lss.sh/lss.sh"
+if [ -f "$LSS_SCRIPT" ]; then
+  source "$LSS_SCRIPT" > /dev/null
+fi
+
+GITCONFIG_SH="${BASE_DOTFILES}/gitconfig/shell.sh"
+if [ -f "${GITCONFIG_SH}" ]; then
+  source "${GITCONFIG_SH}"
+fi
+
+# current directory in java classpath
+export CLASSPATH=".:$CLASSPATH"
+
+# open Sublime Text project in current directory
+if command -v subl > /dev/null 2>&1; then
+  function sublp () {
+    subl *.sublime-project
+  }
+fi
+
+if command -v jenv > /dev/null 2>&1; then
+  eval "$(jenv init -)"
+fi
