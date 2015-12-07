@@ -16,3 +16,6 @@
 [submodule "os_detect.sh"]
 	path = os_detect.sh
 	url = https://github.com/geek4you/os_detect.sh.git
+[submodule "vim"]
+	path = vim
+	url = https://github.com/geek4you/vim.git
