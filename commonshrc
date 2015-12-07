@@ -63,11 +63,19 @@ fi
 # larger bash history (allow 32^3 entries)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
 export HISTCONTROL=ignoredups
 
 # timestamps for bash history. www.debian-administration.org/users/rossen/weblog/1
 HISTTIMEFORMAT='%F %T '
 export HISTTIMEFORMAT
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+
 
 # z ( https://github.com/rupa/z )
 ZFILE=$BASE_DOTFILES/z/z.sh
@@ -105,3 +113,5 @@ fi
 if command -v jenv > /dev/null 2>&1; then
   eval "$(jenv init -)"
 fi
+
+source ~/.fzf.bash
