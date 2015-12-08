@@ -4,8 +4,10 @@ BASE=~/.dotfiles
 
 ## run
 
-cd "$BASE"
+echo "Downloading files.."
+$BASE/download.sh
 
+cd "$BASE"
 git submodule update --init --recursive
 
 echo "Linking..."
@@ -40,8 +42,5 @@ cd git-extras
 sudo make install
 
 echo "Done."
-
-echo "Downloading files.."
-$BASE/download.sh
 
 echo "Done."
