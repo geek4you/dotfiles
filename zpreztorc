@@ -9,6 +9,24 @@
 # General
 #
 
+
+# Add homebrew to the completion path
+fpath=("/usr/local/bin/" $fpath)
+
+
+# why would you type 'cd dir' if you could just type 'dir'?
+setopt AUTO_CD
+
+# This makes cd=pushd
+#setopt AUTO_PUSHD
+
+# If we have a glob this will expand it
+#setopt GLOB_COMPLETE
+#setopt PUSHD_MINUS
+# No more annoying pushd messages...
+# setopt PUSHD_SILENT
+
+
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
 
