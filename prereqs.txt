@@ -1,0 +1,7 @@
+zsh
+git
+cmake
+python-dev
+python-pip
+exuberant-ctags
+tmux
