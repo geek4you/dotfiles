@@ -17,4 +17,4 @@ httpie
 htop
 tig
 trash
-
+reattach-to-user-namespace
