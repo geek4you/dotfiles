@@ -28,3 +28,6 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z.git
+[submodule "zsh-prompt-garrett"]
+	path = zsh-prompt-garrett
+	url = https://github.com/geek4you/zsh-prompt-garrett.git
