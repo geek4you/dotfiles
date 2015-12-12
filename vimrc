@@ -99,6 +99,8 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'chase/vim-ansible-yaml'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'Yggdroot/indentLine'
 
 " Web dev
 if g:web_dev_plugins == 1
