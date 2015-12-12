@@ -44,7 +44,7 @@ export TERM=xterm-256color
 if [[ $platform == 'linux' ]]; then
   if [ -x dircolors ]; then
     eval `dircolors ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark`
-  fi  
+  fi
 elif [[ $platform == 'osx' ]]; then
     export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 fi
@@ -60,3 +60,16 @@ fi
 
 # Fzf source
 source ~/.fzf.zsh
+
+# press Ctrl-Z to come out on vim and press again Ctrl-Z go into vim again
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+      BUFFER="fg"
+      zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+      fi
+  }
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z

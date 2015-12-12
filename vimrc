@@ -101,6 +101,9 @@ NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'derekwyatt/vim-scala'
 
 " Web dev
 if g:web_dev_plugins == 1
