@@ -24,7 +24,6 @@ ln -sf $BASE/tmux/tmux.conf ~/.tmux.conf
 ln -sf $BASE/vim ~/.vim
 ln -sf $BASE/vimrc ~/.vimrc
 ln -sf $BASE/zpreztorc ~/.zpreztorc
-ln -sf $BASE/gitconfig/gitconfig ~/.gitconfig
 echo "Done."
 
 echo "Installing submodules..."
@@ -44,7 +43,7 @@ echo "Installing git-extras..."
 
 cd git-extras
 sudo make install
-
+ln -sf $BASE/gitconfig/gitconfig ~/.gitconfig
 echo "Done."
 
 echo "Done."
