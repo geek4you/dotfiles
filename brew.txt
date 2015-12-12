@@ -1,3 +1,4 @@
+python
 coreutils
 caskroom/cask/brew-cask
 git

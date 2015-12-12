@@ -3,6 +3,8 @@
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+sudo easy_install pip
+
 brew tap homebrew/x11
 
 brew update
