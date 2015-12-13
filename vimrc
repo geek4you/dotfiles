@@ -111,7 +111,6 @@ NeoBundle 'danro/rename.vim'
 NeoBundle 'sukima/xmledit'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'chrisbra/Replay'
-NeoBundle 'vim-show-whitespace'
 NeoBundle 'chrisbra/SudoEdit.vim'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'vim-scripts/restore_view.vim'
@@ -121,6 +120,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'vim-scripts/vim-do'
+vim-scripts/vim-gurl
 " Web dev
 if g:web_dev_plugins == 1
     NeoBundle 'mattn/emmet-vim'
