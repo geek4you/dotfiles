@@ -120,7 +120,8 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'vim-scripts/vim-do'
-vim-scripts/vim-gurl
+NeoBundle 'vim-scripts/vim-gurl'
+NeoBundle 'vim-scripts/vim-lastplace'
 " Web dev
 if g:web_dev_plugins == 1
     NeoBundle 'mattn/emmet-vim'
