@@ -1,6 +1,5 @@
 python
 coreutils
-caskroom/cask/brew-cask
 git
 git-flow
 tree
@@ -18,4 +17,9 @@ httpie
 htop
 tig
 trash
+gitignore
 reattach-to-user-namespace
+pyenv
+pyenv-virtualenv
+rbenv
+ruby-build
