@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /bin/sh
 
 black='\033[0;30m'
 blue='\033[0;34m'
@@ -17,6 +17,9 @@ light_purple='\033[1;35m'
 yellow='\033[1;33m'
 white='\033[1;37m'
 
+alias Reset="tput sgr0"      #  Reset text attributes to normal
+                             #+ without clearing screen.
+
 # Color-echo.
 # Argument $1 = messageu
 # Argument $2 = Colortt
@@ -28,7 +31,6 @@ cecho() {
 
 # Set continue to false by default
 CONTINUE=false
-
 echo ""
 cecho "###############################################" $red
 cecho "#        DO NOT RUN THIS SCRIPT BLINDLY       #" $red
@@ -39,7 +41,6 @@ cecho "#         AND EDIT TO SUIT YOUR NEEDS         #" $red
 cecho "###############################################" $red
 echo ""
 
-
 echo ""
 cecho "Have you read through the script you're about to run and " $red
 cecho "understood that it will make changes to your computer? (y/n)" $red
@@ -47,7 +48,6 @@ read -r response
 if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   CONTINUE=true
 fi
-
 if ! $CONTINUE; then
   # Check if we're continuing and output a message if not
   cecho "Please go read the script, it only takes a few minutes" $red
@@ -60,7 +60,6 @@ echo ""
 cecho "===================================================" $dark_gray
 cecho "Install homebrew? (y/n)" $gray
 cecho "===================================================" $dark_gray
-
 read -r response
 case $response in
   [yY])
@@ -78,19 +77,35 @@ cecho "Install brew utilities? (y/n)" $gray
 cecho "===================================================" $dark_gray
 read -r response
 case $response in
-  [yY])
-    brew tap homebrew/x11    
+  [yYe)
+    brew tap homebrew/x11 
     BREW_APPS="$(cat brew.txt)"
-
+    echo "Installing brew packages"
     for BREW_APP in ${BREW_APPS}; do
       echo "Installing \"$BREW_APP\"..."
       brew install --force $BREW_APP
       echo "...installed \"$BREW_APP\"."
     done
+    
     break;;
   *) break;;
 esac
 
+echo ""
+cecho "===================================================" $dark_gray
+cecho "Install various versions of python? (y/n)" $gray
+cecho "===================================================" $dark_gray
+read -r response
+case $response in
+  [yY])
+    echo ""
+    cecho "Installing python versions" $gray
+    pyenv install 2.7.8
+    pyenv install 2.7.10
+    pyenv global 2.7.10
+    break;;
+  *) break;;
+esac
 
 echo ""
 cecho "===================================================" $dark_gray
@@ -105,7 +120,6 @@ case $response in
     break;;
   *) break;;
 esac
-
 
 echo ""
 cecho "===================================================" $dark_gray
@@ -123,14 +137,12 @@ case $response in
     echo ""
     echo "Installing brew-cask apps"
     CASK_APPS="$(cat brew-cask.txt)"
-
     for CASK_APP in ${CASK_APPS}; do
       echo "Installing \"$CASK_APP\"..."
       brew cask install --force $CASK_APP
       echo "...installed \"$CASK_APP\"."
     done
     brew cask cleanup
-
     break;;
   *) break;;
 esac
@@ -170,7 +182,6 @@ case $response in
     break;;
   *) break;;
 esac
-
 
 echo ""
 cecho "===================================================" $dark_gray
