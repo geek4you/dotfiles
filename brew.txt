@@ -1,3 +1,4 @@
+vim
 python
 coreutils
 git
@@ -9,7 +10,6 @@ zsh
 groovy
 wget
 watch
-michaeldfallen/formula/git-radar
 ack
 jenv
 kdiff3

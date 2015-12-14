@@ -77,7 +77,7 @@ cecho "Install brew utilities? (y/n)" $gray
 cecho "===================================================" $dark_gray
 read -r response
 case $response in
-  [yYe)
+  [yY])
     brew tap homebrew/x11 
     BREW_APPS="$(cat brew.txt)"
     echo "Installing brew packages"
@@ -86,7 +86,9 @@ case $response in
       brew install --force $BREW_APP
       echo "...installed \"$BREW_APP\"."
     done
-    
+    echo "Installing git-radar"
+    brew install michaeldfallen/formula/git-radar
+    echo "...installed git-radar"    
     break;;
   *) break;;
 esac
