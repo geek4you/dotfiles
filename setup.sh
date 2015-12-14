@@ -36,7 +36,7 @@ fi
 ~/.fzf/install
 
 # Download powerline status
-pip install powerline-status --user
+pip install powerline-status 
 
 echo "Installing submodules..."
 
