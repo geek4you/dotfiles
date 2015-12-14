@@ -24,4 +24,5 @@ pyenv-virtualenv
 rbenv
 ruby-build
 cmake
+ctags
 mailcheck
