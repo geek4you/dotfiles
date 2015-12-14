@@ -4,27 +4,39 @@ BASE=~/.dotfiles
 
 ## run
 
-echo "Downloading files.."
-$BASE/download.sh
+# Downlaod tmux plugin manager
+echo "Installing tmux plugin manager"
+if [ ! -d ~/.tmux/plugins/tpm/ ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+# Download Prezto
+echo "Installing Prezto"
+if [ ! -d ~/.oh-my-zsh/ ]; then
+   git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+fi
 
 cd "$BASE"
 git submodule update --init --recursive
 
 echo "Linking..."
-
-ln -sf $BASE/zshrc ~/.zshrc
-#ln -sf $BASE/oh-my-zsh ~/.oh-my-zsh
-ln -sf $BASE/bashrc ~/.bashrc
-ln -sf $BASE/bash_profile ~/.bash_profile
-ln -sf $BASE/bash_aliases ~/.bash_aliases
-ln -sf $BASE/.profile ~/.profile
-ln -sf $BASE/commonshrc ~/.commonshrc
-ln -sf $BASE/inputrc ~/.inputrc
+files="zshrc bashrc bash_profile bash_aliases profile commonshrc inputrc vim vimrc zpreztorc"
+for file in $files; do
+  echo "Creating symlink to $file in home directory."
+  ln -s $BASE/$file ~/.$file 
+done
+echo "Creating symlink to tmux conf"
 ln -sf $BASE/tmux/tmux.conf ~/.tmux.conf
-ln -sf $BASE/vim ~/.vim
-ln -sf $BASE/vimrc ~/.vimrc
-ln -sf $BASE/zpreztorc ~/.zpreztorc
 echo "Done."
+
+# Download and install fzf
+if [ ! -d ~/.fzf/ ]; then
+    git clone https://github.com/junegunn/fzf.git ~/.fzf
+fi
+~/.fzf/install
+
+# Download powerline status
+pip install powerline-status --user
 
 echo "Installing submodules..."
 
