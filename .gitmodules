@@ -25,3 +25,9 @@
 [submodule "zsh-prompt-garrett"]
 	path = zsh-prompt-garrett
 	url = https://github.com/geek4you/zsh-prompt-garrett.git
+[submodule "vim"]
+	path = vim
+	url = https://github.com/geek4you/vim.git
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/geek4you/tmux.git
