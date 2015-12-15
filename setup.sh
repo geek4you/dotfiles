@@ -59,6 +59,13 @@ ln -sf $BASE/gitconfig/gitconfig ~/.gitconfig
 echo "Done."
 
 #install psutil fot tmux status bar (powerline needs it to show stats)
+echo "Installing psutil.."
 easy_install psutil
+echo "Done"
+
+# install i2cssh
+echo "Installing i2cssh..."
+gem install i2cssh
+echo "Done"
 
 echo "Done."
