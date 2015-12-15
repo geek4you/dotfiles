@@ -26,3 +26,5 @@ ruby-build
 cmake
 ctags
 mailcheck
+scala
+scalaenv
