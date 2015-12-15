@@ -23,7 +23,7 @@ echo "Linking..."
 files="zshrc bashrc bash_profile bash_aliases profile commonshrc inputrc vim vimrc zpreztorc"
 for file in $files; do
   echo "Creating symlink to $file in home directory."
-  ln -s $BASE/$file ~/.$file 
+  ln -s $BASE/$file ~/.$file
 done
 echo "Creating symlink to tmux conf"
 ln -sf $BASE/tmux/tmux.conf ~/.tmux.conf
@@ -36,7 +36,7 @@ fi
 ~/.fzf/install
 
 # Download powerline status
-pip install powerline-status 
+pip install powerline-status
 
 echo "Installing submodules..."
 
@@ -57,5 +57,8 @@ cd git-extras
 sudo make install
 ln -sf $BASE/gitconfig/gitconfig ~/.gitconfig
 echo "Done."
+
+#install psutil fot tmux status bar (powerline needs it to show stats)
+easy_install psutil
 
 echo "Done."
