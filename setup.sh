@@ -20,7 +20,7 @@ cd "$BASE"
 git submodule update --init --recursive
 
 echo "Linking..."
-files="zshrc bashrc bash_profile bash_aliases profile commonshrc inputrc vim vimrc zpreztorc"
+files="zshrc bashrc bash_profile bash_aliases profile commonshrc inputrc vim vimrc zpreztorc gdbinit"
 for file in $files; do
   echo "Creating symlink to $file in home directory."
   ln -s $BASE/$file ~/.$file

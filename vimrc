@@ -123,6 +123,12 @@ NeoBundle 'vim-scripts/vim-do'
 NeoBundle 'vim-scripts/vim-gurl'
 NeoBundle 'vim-scripts/vim-lastplace'
 NeoBundle 'tmux-plugins/vim-tmux'
+NeoBundle 'artur-shaik/vim-javacomplete2'
+NeoBundle 'whatyouhide/vim-lengthmatters'
+NeoBundle 'powerman/vim-plugin-AnsiEsc'
+NeoBundle 'djoshea/vim-autoread'
+NeoBundle 'fidian/hexmode'
+
 " Web dev
 if g:web_dev_plugins == 1
     NeoBundle 'mattn/emmet-vim'
