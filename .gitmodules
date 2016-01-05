@@ -28,3 +28,6 @@
 [submodule "tmux"]
 	path = tmux
 	url = https://github.com/geek4you/tmux.git
+[submodule "gitconfig"]
+	path = gitconfig
+	url = https://github.com/geek4you/gitconfig.git
