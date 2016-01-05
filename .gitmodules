@@ -1,6 +1,3 @@
-[submodule "gitconfig"]
-	path = gitconfig
-	url = https://github.com/geek4you/gitconfig.git
 [submodule "git-extras"]
 	path = git-extras
 	url = https://github.com/tj/git-extras.git
@@ -28,7 +25,6 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/geek4you/vim.git
-
 [submodule "tmux"]
 	path = tmux
 	url = https://github.com/geek4you/tmux.git
