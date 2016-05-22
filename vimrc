@@ -102,7 +102,7 @@ NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'derekwyatt/vim-sbt'
 NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'SirVer/ultisnips'
+"NeoBundle 'SirVer/ultisnips'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-commentary'
@@ -123,8 +123,8 @@ NeoBundle 'vim-scripts/vim-do'
 NeoBundle 'vim-scripts/vim-gurl'
 NeoBundle 'vim-scripts/vim-lastplace'
 NeoBundle 'tmux-plugins/vim-tmux'
-NeoBundle 'artur-shaik/vim-javacomplete2'
-NeoBundle 'whatyouhide/vim-lengthmatters'
+"NeoBundle 'artur-shaik/vim-javacomplete2'
+"NeoBundle 'whatyouhide/vim-lengthmatters'
 NeoBundle 'powerman/vim-plugin-AnsiEsc'
 NeoBundle 'djoshea/vim-autoread'
 NeoBundle 'fidian/hexmode'
@@ -226,6 +226,7 @@ endif
 filetype indent plugin on
 
 syntax on "Enable syntax highlighting
+set term=xterm-256color
 
 " Copy ubuntu clipboard
 if has('unnamedplus')

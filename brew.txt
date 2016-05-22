@@ -28,3 +28,4 @@ ctags
 mailcheck
 scala
 scalaenv
+shellcheck
