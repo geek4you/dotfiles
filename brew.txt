@@ -6,7 +6,7 @@ git-flow
 tree
 bash-completion
 google-app-engine
-zsh
+tmux
 groovy
 wget
 watch
